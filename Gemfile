@@ -22,6 +22,12 @@ gem 'devise'
 
 gem 'active_decorator'
 
+gem 'enumerize'
+
+gem 'semantic-ui-sass'
+
+gem 'carrierwave', '~> 1.0'
+
 
 
 gem 'bootsnap', '>= 1.4.2', require: false

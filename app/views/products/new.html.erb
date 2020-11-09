@@ -1,0 +1,35 @@
+<div class="ui text container">
+  <h2>新規商品の追加</h2>
+
+  <div class="ui form">
+  <%= form_with(model: @product, local: true, html: {class: "ui form"}) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit %>
+    <%= f.select :unit, Product.unit.options  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+    <%= f.button :submit, class: "ui button"  %>
+  <% end %>
+  </div>
+ 
+</div>
