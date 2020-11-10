@@ -1,5 +1,11 @@
+<div class="ui container">
+<h2>商品一覧</h2>
 <% @products.each do |product| %>
   <p><%= product.name %></p>
   <p><%= product.display_price %></p>
+  <% if product.image.present? %>
+    <div class="ui small image"><%= image_tag product.image.url %></div>
+  <% end %>
   <hr>
 <% end %>
+</div>

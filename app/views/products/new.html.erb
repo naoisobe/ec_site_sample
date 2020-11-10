@@ -26,8 +26,9 @@
   
   <div class="field">
     <%= f.label :image %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, input_html: {accept: (@product.image.accept_extensions)} %>
   </div>
+
     <%= f.button :submit, class: "ui button"  %>
   <% end %>
   </div>
